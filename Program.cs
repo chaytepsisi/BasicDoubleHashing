@@ -9,7 +9,7 @@ namespace BasicDoubleHashing
 {
     class Program
     {
-        static void computehash()
+        static void Computehash()
         {
             Stopwatch stp = new Stopwatch();
             stp.Start();
@@ -22,7 +22,7 @@ namespace BasicDoubleHashing
                 stp.Restart();
                 while (stp.ElapsedMilliseconds < 60000)
                 {
-                    string hashValue = Crypto.doubleSha256((hashCounter++).ToString());
+                    string hashValue = Crypto.DoubleSha256((hashCounter++).ToString());
                     counter = 0;
                     while (hashValue[0] == '0')
                     {
@@ -38,7 +38,7 @@ namespace BasicDoubleHashing
         }
         static void Main(string[] args)
         {
-            computehash();
+            Computehash();
         }
     }
 }
