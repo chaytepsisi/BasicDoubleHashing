@@ -8,7 +8,7 @@ namespace BasicDoubleHashing
 {
     class Crypto
     {
-        public static string sha256(string message)
+        public static string Sha256(string message)
         {
             SHA256Managed crypt = new SHA256Managed();
             string hash = String.Empty;
@@ -20,10 +20,10 @@ namespace BasicDoubleHashing
             return hash;
         }
 
-        public static string doubleSha256(string message)
+        public static string DoubleSha256(string message)
         {
-            string hashVal = sha256(message);
-            return sha256(hashVal);
+            string hashVal = Sha256(message);
+            return Sha256(hashVal);
         }
 
     }
